@@ -1,79 +1,423 @@
+
+/* =======================================
+   1. CONFIGURAÇÕES GERAIS
+======================================= */
+
+/* O seletor * seleciona todos os elementos */
 * {
+    margin: 0;
+    padding: 0;
+
+    /* Inclui padding e borda no cálculo do tamanho */
     box-sizing: border-box;
 }
+
+
+/* =======================================
+   2. CORPO DA PÁGINA
+======================================= */
+
 body {
-    overflow: hidden;
-    position: relative;
-    bottom: 40px;
-    background-image: url(—Pngtree—top\ view\ wood\ table\ with_15719829.png);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;    
+
+    /* Fonte utilizada na página */
+    font-family: Arial, sans-serif;
+
+    /* Cor de fundo */
+    background-color: #f1f4f8;
+
+    /* Cor padrão dos textos */
+    color: #333;
+
+    /* Altura mínima da página */
+    min-height: 100vh;
+
 }
-input {
-    grid-column: span 4;
-    width: 290px;
-    height: 60px;
-    font-size: 20px;
-    margin-top: 27px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    background: linear-gradient(rgba(49, 48, 48, 0.678));
-    font-size: 25px;
-    color: white;
-    margin-left: 5px;
-    padding-left: 5px;
+
+
+/* =======================================
+   3. CONTAINER PRINCIPAL
+======================================= */
+
+.container {
+
+    /* Largura máxima do conteúdo */
+    max-width: 1000px;
+
+    /* Centraliza horizontalmente */
+    margin: 0 auto;
+
+    /* Espaçamento interno */
+    padding: 30px 20px;
+
 }
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    width: 350px;
-    margin: 50px auto;
-    height: 80px;
-    padding: auto;
-    position: relative;
-    bottom: -18px;
-    background: linear-gradient(rgba(49, 48, 48, 0.678));
-    backdrop-filter: blur(2px);
-    color: white;
-    border-radius: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+/* =======================================
+   4. CABEÇALHO
+======================================= */
+
+.cabecalho {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
 }
-.Calculadora {
+
+
+/* Título principal */
+.cabecalho h1 {
+
+    color: #243b53;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* Texto abaixo do título */
+.cabecalho p {
+
+    color: #627d98;
+
+}
+
+
+/* =======================================
+   5. RESUMO FINANCEIRO
+======================================= */
+
+.resumo {
+
+    /* Organiza os cartões usando Grid */
     display: grid;
-    gap: 8px;
-    backdrop-filter: blur(2px);
-    grid-template-columns: repeat(4,60px);
-    padding-left: 20px;
-    margin: 50px auto;
-    width: 350px;
-    border: none;
-    padding-bottom: 25px;
-    margin-top: -30px;
-    background:linear-gradient(rgba(49, 48, 48, 0.678));
+
+    /* Cria três colunas de mesmo tamanho */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Espaço entre os cartões */
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Cartões financeiros */
+.cartao {
+
+    background-color: white;
+
+    padding: 22px;
+
     border-radius: 10px;
+
+    /* Sombra dos cartões */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
 }
+
+
+/* Títulos dos cartões */
+.cartao h2 {
+
+    font-size: 16px;
+
+    color: #627d98;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Valores financeiros */
+.valor {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #243b53;
+
+}
+
+
+/* Destaque do saldo */
+.destaque {
+
+    border-left: 5px solid #2e9d68;
+
+}
+
+
+/* =======================================
+   6. PAINÉIS
+======================================= */
+
+.painel {
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+}
+
+
+/* Títulos das seções */
+.painel h2 {
+
+    color: #243b53;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =======================================
+   7. FORMULÁRIOS
+======================================= */
+
+.grupo-formulario {
+
+    /* Organiza os campos verticalmente */
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* Nomes dos campos */
+label {
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+/* Campos de entrada */
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccd6e0;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    /* Remove o contorno padrão */
+    outline: none;
+
+}
+
+
+/* Efeito quando o campo recebe foco */
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #3273dc;
+
+}
+
+
+/* Campo de descrição */
+textarea {
+
+    /* Altura mínima */
+    min-height: 90px;
+
+    /* Permite alterar a altura verticalmente */
+    resize: vertical;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* =======================================
+   8. BOTÕES
+======================================= */
+
 button {
-    height: 58px;
-    width: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    border-radius: 20px;
-    font-weight: 100;
-    margin-left: 20px;
-    background-color: rgba(49, 48, 48, 0.678);
-    border: none;
+
+    padding: 12px 18px;
+
+    background-color: #3273dc;
+
     color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    /* Mostra a mãozinha ao passar o mouse */
+    cursor: pointer;
+
 }
+
+
+/* Efeito quando o mouse passa sobre o botão */
 button:hover {
-    transform: scale(1.1);
-    transition: 0.1s;
-    cursor:pointer;
-    font-weight: 200;
-    font-size: 32px;
-    background-color: rgba(109, 108, 108, 0.678);
+
+    background-color: #245bb5;
+
+}
+
+
+/* Botão de adicionar */
+.botao-adicionar {
+
+    margin-top: 5px;
+
+}
+
+
+/* Botão de excluir */
+.botao-excluir {
+
+    background-color: #c0392b;
+
+    padding: 8px 12px;
+
+    font-size: 13px;
+
+}
+
+
+/* Efeito do botão de excluir */
+.botao-excluir:hover {
+
+    background-color: #922b21;
+
+}
+
+
+/* =======================================
+   9. TABELA DE GASTOS
+======================================= */
+
+/* Permite rolagem horizontal */
+.tabela-container {
+
+    overflow-x: auto;
+
+}
+
+
+/* Estrutura da tabela */
+table {
+
+    width: 100%;
+
+    /* Junta as bordas das células */
+    border-collapse: collapse;
+
+    /* Evita apertar demais as cinco colunas */
+    min-width: 650px;
+
+}
+
+
+/* Células e cabeçalhos */
+th,
+td {
+
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e1e7ed;
+
+}
+
+
+/* Cabeçalho da tabela */
+th {
+
+    background-color: #f5f7fa;
+
+    color: #526579;
+
+}
+
+
+/* Mensagem quando não existem gastos */
+.lista-vazia {
+
+    text-align: center;
+
+    color: #8996a5;
+
+    padding: 25px;
+
+}
+
+
+/* =======================================
+   10. RODAPÉ
+======================================= */
+
+footer {
+
+    text-align: center;
+
+    color: #8996a5;
+
+    font-size: 13px;
+
+    padding: 15px;
+
+}
+
+
+/* =======================================
+   11. RESPONSIVIDADE
+======================================= */
+
+/* Essas configurações entram em telas de até 650px */
+@media (max-width: 650px) {
+
+    /* Cartões ficam um abaixo do outro */
+    .resumo {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    /* Diminui o espaço interno dos painéis */
+    .painel {
+
+        padding: 18px;
+
+    }
+
+    /* Diminui o título */
+    .cabecalho h1 {
+
+        font-size: 25px;
+
+    }
+
 }
