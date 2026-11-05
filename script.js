@@ -73,7 +73,8 @@ function formatarMoeda(valor) {
 // addEventListener aguarda um evento.
 // Neste caso, o evento é o clique no botão.
 
-botaoSalario.addEventListener("click", function() {
+
+botaoSalario.addEventListener("click", function () {
 
     // Captura o valor digitado e transforma em número.
     const valorSalario = Number(campoSalario.value);
@@ -115,7 +116,7 @@ botaoSalario.addEventListener("click", function() {
 // 5. ADICIONANDO UM GASTO
 // =======================================
 
-botaoAdicionar.addEventListener("click", function() {
+botaoAdicionar.addEventListener("click", function () {
 
     // Captura o nome do gasto.
     // trim remove espaços no começo e no final.
@@ -204,7 +205,7 @@ botaoAdicionar.addEventListener("click", function() {
 function atualizarResumo() {
 
     // reduce percorre o array e soma os valores.
-    const totalGastos = gastos.reduce(function(soma, gasto) {
+    const totalGastos = gastos.reduce(function (soma, gasto) {
 
         // Soma o valor atual com o próximo gasto.
         return soma + gasto.valor;
@@ -272,7 +273,7 @@ function atualizarTabela() {
     // forEach percorre todos os gastos cadastrados.
     // gasto representa o objeto atual.
     // indice representa a posição dele no array.
-    gastos.forEach(function(gasto, indice) {
+    gastos.forEach(function (gasto, indice) {
 
 
         // Cria uma linha para o gasto.
@@ -317,7 +318,7 @@ function atualizarTabela() {
 
 
         // Evento de clique para excluir o gasto.
-        botaoExcluir.addEventListener("click", function() {
+        botaoExcluir.addEventListener("click", function () {
 
             // splice remove o gasto pelo índice.
             gastos.splice(indice, 1);
@@ -416,7 +417,7 @@ function carregarDados() {
         if (Array.isArray(dados.gastos)) {
 
             // Filtra os gastos que possuem informações válidas.
-            gastos = dados.gastos.filter(function(gasto) {
+            gastos = dados.gastos.filter(function (gasto) {
 
                 return (
                     gasto &&
@@ -426,7 +427,7 @@ function carregarDados() {
                     Number(gasto.valor) > 0
                 );
 
-            }).map(function(gasto) {
+            }).map(function (gasto) {
 
                 // Reconstrói cada objeto.
                 // Também permite carregar gastos antigos sem observação.
