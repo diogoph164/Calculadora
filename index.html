@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Calculadora de Impostos</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <main>
-        <h1>Calculadora de Impostos</h1>
+        <h1 class="titulo-calculo">Calculadora de Impostos</h1>
 
         <label for="salario">Salário bruto (R$):</label>
         <input type="number" id="salario" placeholder="Ex: 3000">
 
         <button id="calcular">Calcular</button>
 
-        <!-- O JavaScript escreve o resultado aqui -->
-        <div id="resultado"></div>
+        <p class="descricao">Feito pelo programador Diogo</p>
+
+        <!-- Uma observação sobre o que seria o inss -->
+        <div id="sobre-inss">
+
+            <h2 class="titulo-inss">Sobre Inss</h2>
+
+            <button id="sobre">Como funciona?</button>
+
+            <dialog>
+
+            <p>O INSS (Instituto Nacional do Seguro Social) é responsável por administrar benefícios como
+                aposentadoria,
+                auxílio-doença e salário-maternidade. Para trabalhadores com carteira assinada, uma porcentagem do
+                salário é descontada mensalmente para contribuir com a Previdência Social. O desconto é progressivo, ou
+                seja, depende do valor recebido.
+            </p>
+            </dialog>
+
+            <button id="exemplo">Exemplo</button>
+            
+            <dialog>
+            <p>Exemplos:
+
+                - Quem ganha R$ 1.621,00 tem um desconto de aproximadamente R$ 121,58 (7,5%).
+                - Quem ganha R$ 2.000,00 tem um desconto de aproximadamente R$ 155,69.
+                - Quem ganha R$ 3.000,00 tem um desconto de aproximadamente R$ 248,60.
+            </p>
+            </dialog>
+            <button id="resumo">Resumo</button>
+            <dialog>
+            <p class="resumo">Resumindo: o INSS retira uma parte do salário todos os meses para financiar a proteção do trabalhador em
+                situações como aposentadoria, doença ou afastamento do trabalho.
+
+                Os valores são exemplos de cálculo pelas faixas progressivas de 2026 e não incluem outros descontos,
+                como vale-transporte ou Imposto de Renda.</p>
+            </dialog>
+        </div>
+        <!-- Uma observação sobre o imposto de renda -->
+        <div id="imposto-de-renda">
+            <h2 class="titulo-imposto">Sobre imposto de renda</h2>
+            <p></p>
+        </div>
+
     </main>
+    <!-- O JavaScript escreve o resultado aqui -->
+    <div id="resultado"></div>
+
 </body>
+
 </html>
